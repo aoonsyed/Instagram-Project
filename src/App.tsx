@@ -6,6 +6,31 @@ import { Product, Category } from './types';
 
 // --- Components ---
 
+const BrandLogo = ({ className }: { className?: string }) => (
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 48 48"
+    className={className}
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M24 3.5c7.1 0 12.9 5.8 12.9 12.9 0 4.5-2.3 8.6-5.8 10.9-1.9 1.2-3.1 3.2-3.1 5.5v1.4H20v-1.4c0-2.3-1.2-4.3-3.1-5.5-3.5-2.3-5.8-6.4-5.8-10.9C11.1 9.3 16.9 3.5 24 3.5Z"
+      className="fill-brand-accent/20"
+    />
+    <path
+      d="M24 6.5c5.5 0 9.9 4.4 9.9 9.9 0 3.4-1.7 6.5-4.5 8.3-2.6 1.7-4.2 4.6-4.2 7.8v.7h-2.4v-.7c0-3.2-1.6-6.1-4.2-7.8-2.8-1.8-4.5-4.9-4.5-8.3 0-5.5 4.4-9.9 9.9-9.9Z"
+      className="fill-brand-accent"
+    />
+    <path
+      d="M18 40.5h12M20.5 44h7"
+      className="stroke-brand-ink/70"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
 const Navbar = ({ onCartClick }: { onCartClick: () => void }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,7 +50,12 @@ const Navbar = ({ onCartClick }: { onCartClick: () => void }) => {
         </div>
 
         <div className="flex-1 flex justify-center">
-          <h1 className="text-3xl md:text-4xl font-serif tracking-tighter italic">Be U tiful XOxo</h1>
+          <a href="#" className="inline-flex items-center gap-3 group">
+            <BrandLogo className="h-9 w-9 md:h-10 md:w-10 drop-shadow-sm" />
+            <h1 className="text-3xl md:text-4xl font-serif tracking-tighter italic group-hover:text-brand-accent transition-colors">
+              Beautiful XoXo
+            </h1>
+          </a>
         </div>
 
         <div className="flex-1 flex justify-end items-center gap-6">
