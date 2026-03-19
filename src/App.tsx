@@ -182,13 +182,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
           <span className="text-[10px] uppercase tracking-widest opacity-50 mb-1 block">{product.category}</span>
           <h3 className="text-lg font-serif italic">{product.name}</h3>
         </div>
-        <span className="text-sm font-medium">${product.price}</span>
       </div>
     </motion.div>
   );
 };
 
 const ProductModal = ({ product, onClose }: { product: Product | null, onClose: () => void }) => {
+  const [is_coming_soon, set_is_coming_soon] = useState(false);
   if (!product) return null;
 
   return (
@@ -239,7 +239,6 @@ const ProductModal = ({ product, onClose }: { product: Product | null, onClose: 
             {product.category}
           </span>
           <h2 className="text-4xl md:text-5xl font-serif italic mb-6">{product.name}</h2>
-          <p className="text-2xl font-light mb-8">${product.price}</p>
           
           <div className="h-[1px] w-full bg-brand-ink/10 mb-8"></div>
           
@@ -260,8 +259,12 @@ const ProductModal = ({ product, onClose }: { product: Product | null, onClose: 
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="flex-1 bg-brand-ink text-brand-bg py-5 text-xs uppercase tracking-[0.2em] font-bold hover:bg-brand-accent transition-colors duration-500">
-              Add to Bag
+            <button
+              className={`flex-1 bg-brand-ink text-brand-bg py-5 text-xs uppercase tracking-[0.2em] font-bold hover:bg-brand-accent transition-colors duration-500 ${is_coming_soon ? 'opacity-60 cursor-not-allowed hover:bg-brand-ink' : ''}`}
+              onClick={() => set_is_coming_soon(true)}
+              disabled={is_coming_soon}
+            >
+              {is_coming_soon ? 'Coming soon' : 'Add to Bag'}
             </button>
             <a 
               href={SOCIAL_LINKS.whatsapp}

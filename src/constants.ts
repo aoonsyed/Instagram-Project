@@ -4,7 +4,7 @@ import butterflyLogo from './assets/butterfly.png';
 export const PRODUCTS: Product[] = [
   {
     id: 'lash1',
-    name: 'Garden Dew',
+    name: 'Zenobia Lashes',
     category: 'Lashes',
     price: 15.99,
     description: 'Reusable, lightweight lashes made to enhance your everyday look.',
@@ -13,7 +13,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'lash2',
-    name: 'Blush Whisper',
+    name: 'Bellora Lashes',
     category: 'Lashes',
     price: 15.99,
     description: 'Reusable, lightweight lashes made to enhance your everyday look.',
@@ -22,7 +22,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'lash3',
-    name: 'Crystal Drift',
+    name: 'Mila Lashes',
     category: 'Lashes',
     price: 15.99,
     description: 'Reusable, lightweight lashes made to enhance your everyday look.',
@@ -31,7 +31,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'lash4',
-    name: 'Midnight Muse',
+    name: 'Arielle Lashes',
     category: 'Lashes',
     price: 15.99,
     description: 'Reusable, lightweight lashes made to enhance your everyday look.',
@@ -40,7 +40,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'lash5',
-    name: 'Pearl Kisses',
+    name: 'Signature Lashes',
     category: 'Lashes',
     price: 15.99,
     description: 'Reusable, lightweight lashes made to enhance your everyday look.',
@@ -49,7 +49,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'lash6',
-    name: 'Rose Halo',
+    name: 'Alyana Lashes',
     category: 'Lashes',
     price: 15.99,
     description: 'Reusable, lightweight lashes made to enhance your everyday look.',
@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '7',
-    name: 'Rose Radiance Bangles Set',
+    name: 'Churriyan Sets',
     category: 'Accessories',
     price: 15,
     description: 'A quick video showcase of our accessory styling. Perfect for content and custom orders.',
@@ -77,7 +77,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '8',
-    name: 'Midnight Glamour Bangles Set',
+    name: 'Churriyan Sets',
     category: 'Accessories',
     price: 20,
     description: 'Another short accessory video to help you see the final look and fit.',
@@ -87,7 +87,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '9',
-    name: 'Royal Heritage Bangles Set',
+    name: 'Churriyan Sets',
     category: 'Accessories',
     price: 25,
     description: 'Full accessory video for a closer look before you inquire.',
@@ -97,7 +97,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '10',
-    name: 'Aurora Pearl Drop Necklace',
+    name: 'Mint 18K Gold Plated American Diamond Set',
     category: 'Jewelry',
     price: 27,
     description: 'Soft shimmer pearl drops styled to add instant glow to every outfit.',
@@ -107,7 +107,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '11',
-    name: 'Velvet Ruby Hoop Earrings',
+    name: 'Golden Peach Jhumar',
     category: 'Jewelry',
     price: 33,
     description: 'Rich ruby-toned hoops designed for bold sparkle and a secure fit.',
@@ -117,7 +117,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '12',
-    name: 'Opaline Star Bracelet',
+    name: 'Silver American Diamond Set',
     category: 'Jewelry',
     price: 25,
     description: 'A star-inspired bracelet with opaline shine for everyday glam.',
@@ -127,37 +127,17 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '13',
-    name: 'Blush Aurora Cuff Bracelet',
+    name: 'Maroon Jhumar',
     category: 'Jewelry',
     price: 41,
     description: 'A refined cuff with blush highlights for a clean, luxe wrist moment.',
     image: 'https://res.cloudinary.com/dxatmwzwk/image/upload/v1773936199/WhatsApp_Image_2026-03-19_at_4.28.39_PM_1_wi6ubb.jpg',
-    video_url: 'https://res.cloudinary.com/dxatmwzwk/video/upload/v1773936203/WhatsApp_Video_2026-03-19_at_4.28.41_PM_ekjtxr.mp4',
+    video_url: 'https://res.cloudinary.com/dxatmwzwk/video/upload/v1773943546/WhatsApp_Video_2026-03-19_at_11.35.57_AM_pvetfh.mp4',
     details: ['Geometric detailing', 'Comfort curve', 'Day-to-night shine']
   },
   {
-    id: '14',
-    name: 'Midnight Halo Charm Ring',
-    category: 'Jewelry',
-    price: 29,
-    description: 'A halo charm ring that catches the light with every little movement.',
-    image: 'https://res.cloudinary.com/dxatmwzwk/image/upload/v1773936196/WhatsApp_Image_2026-03-19_at_4.28.39_PM_2_vawh3k.jpg',
-    video_url: 'https://res.cloudinary.com/dxatmwzwk/video/upload/v1773936211/WhatsApp_Video_2026-03-19_at_11.35.50_AM_lddzsv.mp4',
-    details: ['Halos & sparkle', 'Smooth edges', 'Perfect gifting']
-  },
-  {
-    id: '15',
-    name: 'Rose Quartz Twist Pendant',
-    category: 'Jewelry',
-    price: 46,
-    description: 'A twist pendant with rose quartz energy for soft romance and glow.',
-    image: 'https://res.cloudinary.com/dxatmwzwk/image/upload/v1773936199/WhatsApp_Image_2026-03-19_at_4.28.39_PM_1_wi6ubb.jpg',
-    video_url: 'https://res.cloudinary.com/dxatmwzwk/video/upload/v1773936204/WhatsApp_Video_2026-03-19_at_11.35.47_AM_dprquy.mp4',
-    details: ['Rose-toned sparkle', 'Secure chain', 'Statement neckline']
-  },
-  {
     id: '16',
-    name: 'Celestial Drop Studs',
+    name: 'Emerald Green 18K Gold Plated American Diamond Set',
     category: 'Jewelry',
     price: 38,
     description: 'Drop studs with celestial shine that looks amazing in close-up.',
@@ -167,7 +147,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '17',
-    name: 'Pearl Bloom Bracelet Set',
+    name: 'Gold bangals',
     category: 'Jewelry',
     price: 29,
     description: 'Bloom-inspired pearls styled into a wearable bracelet set for everyday shine.',
@@ -176,7 +156,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '18',
-    name: 'Opaline Spark Charm Bracelet',
+    name: 'Red and Black Bangle Set',
     category: 'Jewelry',
     price: 34,
     description: 'Opaline spark charm bracelet with a luxe look and elegant wrist shine.',
