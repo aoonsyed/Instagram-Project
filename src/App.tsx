@@ -3,33 +3,12 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ShoppingBag, Instagram, MessageCircle, X, ChevronRight, ArrowRight, Menu, Star, Mail, MapPin, Phone } from 'lucide-react';
 import { PRODUCTS, SOCIAL_LINKS, TESTIMONIALS } from './constants';
 import { Product, Category } from './types';
+import butterflyLogo from './assets/butterfly.png';
+import luxeBraceletPink from './assets/bracelets-pink.png';
+import luxeBraceletRed from './assets/bracelets-red.png';
+import luxeLashes from './assets/lashes-garden.png';
 
 // --- Components ---
-
-const BrandLogo = ({ className }: { className?: string }) => (
-  <svg
-    aria-hidden="true"
-    viewBox="0 0 48 48"
-    className={className}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M24 3.5c7.1 0 12.9 5.8 12.9 12.9 0 4.5-2.3 8.6-5.8 10.9-1.9 1.2-3.1 3.2-3.1 5.5v1.4H20v-1.4c0-2.3-1.2-4.3-3.1-5.5-3.5-2.3-5.8-6.4-5.8-10.9C11.1 9.3 16.9 3.5 24 3.5Z"
-      className="fill-brand-accent/20"
-    />
-    <path
-      d="M24 6.5c5.5 0 9.9 4.4 9.9 9.9 0 3.4-1.7 6.5-4.5 8.3-2.6 1.7-4.2 4.6-4.2 7.8v.7h-2.4v-.7c0-3.2-1.6-6.1-4.2-7.8-2.8-1.8-4.5-4.9-4.5-8.3 0-5.5 4.4-9.9 9.9-9.9Z"
-      className="fill-brand-accent"
-    />
-    <path
-      d="M18 40.5h12M20.5 44h7"
-      className="stroke-brand-ink/70"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-    />
-  </svg>
-);
 
 const Navbar = ({ onCartClick }: { onCartClick: () => void }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,7 +30,11 @@ const Navbar = ({ onCartClick }: { onCartClick: () => void }) => {
 
         <div className="flex-1 flex justify-center">
           <a href="#" className="inline-flex items-center gap-3 group">
-            <BrandLogo className="h-9 w-9 md:h-10 md:w-10 drop-shadow-sm" />
+            <img
+              src={butterflyLogo}
+              alt="Beautiful XoXo butterfly logo"
+              className="h-9 w-9 md:h-10 md:w-10 object-contain drop-shadow-sm"
+            />
             <h1 className="text-3xl md:text-4xl font-serif tracking-tighter italic group-hover:text-brand-accent transition-colors">
               Beautiful XoXo
             </h1>
@@ -104,12 +87,12 @@ const Hero = () => {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1920&auto=format&fit=crop" 
-          alt="Luxury Jewelry" 
-          className="w-full h-full object-cover opacity-30"
+          src={luxeLashes}
+          alt="Beautiful XoXo lashes and jewelry"
+          className="w-full h-full object-cover opacity-40"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-bg/40 via-brand-secondary/20 to-brand-bg"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-bg/30 via-brand-secondary/10 to-brand-bg"></div>
       </div>
 
       <div className="relative z-10 text-center px-6">
@@ -127,7 +110,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="text-6xl md:text-9xl font-serif italic leading-none mb-8 text-brand-ink"
         >
-          Be <span className="text-brand-accent">U</span> tiful <br /> <span className="md:ml-24">XOxo</span>
+          Be <span className="text-brand-accent">U</span> tiful <br /> <span className="md:ml-24">XoXo</span>
         </motion.h2>
         <motion.div
           initial={{ opacity: 0 }}
@@ -317,9 +300,12 @@ const Contact = () => {
         <div className="md:w-1/2">
           <span className="text-xs uppercase tracking-[0.4em] mb-6 block font-medium text-brand-accent">Get In Touch</span>
           <h2 className="text-5xl md:text-7xl font-serif italic mb-12">Let's Connect</h2>
-          <p className="text-lg text-brand-ink/60 leading-relaxed mb-12">
+          <p className="text-lg text-brand-ink/60 leading-relaxed mb-6">
             Have questions about our collection or need a custom consultation? 
             Our team is here to help you find your perfect glow.
+          </p>
+          <p className="text-sm text-brand-ink/50 leading-relaxed mb-12">
+            We love hearing from you. Share your suggestions, custom ideas, or feedback so we can keep making Beautiful XoXo even more you.
           </p>
           
           <div className="space-y-8">
@@ -329,7 +315,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-xs uppercase tracking-widest font-bold">Email</h4>
-                <p className="text-brand-ink/60 italic">hello@beutifulxoxo.com</p>
+                <p className="text-brand-ink/60 italic">be.you.tiful752@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center gap-6">
@@ -337,8 +323,8 @@ const Contact = () => {
                 <Phone size={20} />
               </div>
               <div>
-                <h4 className="text-xs uppercase tracking-widest font-bold">WhatsApp</h4>
-                <p className="text-brand-ink/60 italic">+1 (234) 567-890</p>
+                <h4 className="text-xs uppercase tracking-widest font-bold">Phone</h4>
+                <p className="text-brand-ink/60 italic">347-306-5783</p>
               </div>
             </div>
             <div className="flex items-center gap-6">
@@ -347,7 +333,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-xs uppercase tracking-widest font-bold">Location</h4>
-                <p className="text-brand-ink/60 italic">New York, NY</p>
+                <p className="text-brand-ink/60 italic">New York City</p>
               </div>
             </div>
           </div>
@@ -389,7 +375,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
           <div className="md:col-span-2">
-            <h2 className="text-4xl font-serif italic mb-8">Be U tiful XOxo</h2>
+            <h2 className="text-4xl font-serif italic mb-8">Beautiful XoXo</h2>
             <p className="text-brand-bg/60 max-w-md leading-relaxed mb-8">
               Crafting timeless beauty through exquisite artificial jewelry, nails, and lashes. 
               Based in the heart of New York, serving elegance worldwide.
@@ -424,7 +410,7 @@ const Footer = () => {
         <div className="h-[1px] w-full bg-brand-bg/10 mb-12"></div>
         
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.2em] text-brand-bg/40">
-          <p>© 2024 Be U tiful XOxo. All Rights Reserved.</p>
+          <p>© 2024 Beautiful XoXo. All Rights Reserved.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-brand-bg transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-brand-bg transition-colors">Terms of Service</a>
@@ -453,23 +439,25 @@ export default function App() {
       <Hero />
 
       <section id="collection" className="py-32 max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
-          <div>
-            <span className="text-xs uppercase tracking-[0.4em] mb-4 block font-medium opacity-50">Curated Selection</span>
-            <h2 className="text-5xl md:text-7xl font-serif italic">Our Collection</h2>
-          </div>
-          
-          <div className="flex flex-wrap gap-8 text-[10px] uppercase tracking-[0.2em] font-bold">
-            {(['All', 'Jewelry', 'Nails', 'Lashes', 'Accessories'] as Category[]).map(cat => (
-              <button 
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`pb-2 border-b-2 transition-all duration-500 ${selectedCategory === cat ? 'border-brand-accent text-brand-ink' : 'border-transparent text-brand-ink/40 hover:text-brand-ink'}`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+        <div className="mb-20 text-center">
+          <span className="text-xs uppercase tracking-[0.4em] mb-4 block font-medium opacity-50">
+            Curated Selection
+          </span>
+          <h2 className="text-5xl md:text-7xl font-serif italic">
+            Our Collection
+          </h2>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-8 mb-16 text-[10px] uppercase tracking-[0.2em] font-bold">
+          {(['All', 'Jewelry', 'Nails', 'Lashes', 'Accessories'] as Category[]).map(cat => (
+            <button 
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`pb-2 border-b-2 transition-all duration-500 ${selectedCategory === cat ? 'border-brand-accent text-brand-ink' : 'border-transparent text-brand-ink/40 hover:text-brand-ink'}`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24">

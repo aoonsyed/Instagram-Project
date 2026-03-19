@@ -1,32 +1,35 @@
 import { Product } from './types';
+import luxeBraceletPink from './assets/bracelets-pink.png';
+import luxeBraceletRed from './assets/bracelets-red.png';
+import luxeLashes from './assets/lashes-garden.png';
 
 export const PRODUCTS: Product[] = [
   {
     id: '1',
-    name: 'Celestial Pendant',
+    name: 'Luxe Rose Gold Bangles',
     category: 'Jewelry',
     price: 85,
-    description: 'A delicate gold-plated pendant featuring a minimalist moon and star design.',
-    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800&auto=format&fit=crop',
-    details: ['18k Gold Plated', 'Hypoallergenic', 'Adjustable Chain']
+    description: 'Stackable rose gold bangles on blush satin, scattered with pearls and petals for a true luxe moment.',
+    image: luxeBraceletPink,
+    details: ['High-shine finish', 'Stackable set', 'Perfect for gifting']
   },
   {
     id: '2',
-    name: 'Midnight Volume Lashes',
+    name: 'Luxe Ruby Bangles',
     category: 'Lashes',
     price: 32,
-    description: 'Extra-volume synthetic lashes for a bold, midnight-inspired gaze.',
-    image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop',
-    details: ['Synthetic Silk', 'Lightweight Band', 'Dramatic Volume']
+    description: 'Deep ruby stones and oxidized metal for a bold, romantic wrist stack.',
+    image: luxeBraceletRed,
+    details: ['Statement sparkle', 'Comfortable fit', 'Evening-ready']
   },
   {
     id: '3',
-    name: 'Silk Flutter Lashes',
+    name: 'Blooming Lash Garden',
     category: 'Lashes',
     price: 28,
-    description: 'Ultra-lightweight silk lashes for a natural yet dramatic look.',
-    image: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=800&auto=format&fit=crop',
-    details: ['Handmade', 'Up to 25 wears', 'Cruelty-free']
+    description: 'Soft, fluttery lashes styled with florals and crystal bands for a dreamy flatlay.',
+    image: luxeLashes,
+    details: ['Soft band', 'Multiple styles', 'Perfect for content shoots']
   },
   {
     id: '4',
@@ -78,7 +81,7 @@ export const TESTIMONIALS = [
   {
     id: '3',
     name: 'Jessica M.',
-    text: 'Best lashes I have ever used. Lightweight and reusable. Highly recommend Be U tiful XOxo!',
+    text: 'Best lashes I have ever used. Lightweight and reusable. Highly recommend Beautiful XoXo!',
     rating: 5
   }
 ];
