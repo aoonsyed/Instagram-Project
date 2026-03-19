@@ -151,12 +151,25 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
       onClick={onClick}
     >
       <div className="relative aspect-[3/4] overflow-hidden bg-white mb-6">
-        <img 
-          src={product.image} 
-          alt={product.name} 
-          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-          referrerPolicy="no-referrer"
-        />
+        {product.video_url ? (
+          <video
+            src={product.video_url}
+            poster={product.image}
+            muted
+            loop
+            autoPlay
+            playsInline
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            referrerPolicy="no-referrer"
+          />
+        ) : (
+          <img 
+            src={product.image} 
+            alt={product.name} 
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            referrerPolicy="no-referrer"
+          />
+        )}
         <div className="absolute inset-0 bg-brand-ink/0 group-hover:bg-brand-ink/5 transition-colors duration-500"></div>
         <div className="absolute bottom-6 left-6 right-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
           <button className="w-full py-3 bg-brand-bg text-brand-ink text-xs uppercase tracking-widest font-medium shadow-xl">
@@ -201,12 +214,24 @@ const ProductModal = ({ product, onClose }: { product: Product | null, onClose: 
         </button>
 
         <div className="md:w-1/2 h-64 md:h-auto">
-          <img 
-            src={product.image} 
-            alt={product.name} 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
+          {product.video_url ? (
+            <video
+              src={product.video_url}
+              poster={product.image}
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+            />
+          ) : (
+            <img 
+              src={product.image} 
+              alt={product.name} 
+              className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+            />
+          )}
         </div>
 
         <div className="md:w-1/2 p-8 md:p-16 overflow-y-auto">
@@ -432,6 +457,11 @@ export default function App() {
     ? PRODUCTS 
     : PRODUCTS.filter(p => p.category === selectedCategory);
 
+  // In the "All" view, show products that have videos first.
+  const sortedProducts = selectedCategory === 'All'
+    ? filteredProducts.slice().sort((a, b) => Number(!!b.video_url) - Number(!!a.video_url))
+    : filteredProducts;
+
   return (
     <div className="min-h-screen">
       <Navbar onCartClick={() => setIsCartOpen(true)} />
@@ -462,7 +492,7 @@ export default function App() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24">
           <AnimatePresence mode="popLayout">
-            {filteredProducts.map(product => (
+            {sortedProducts.map(product => (
               <ProductCard 
                 key={product.id} 
                 product={product} 
